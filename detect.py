@@ -107,6 +107,6 @@ def get_det_boxes(image, display = True, expand = True, disp_per=True):
 if __name__ == '__main__':
     img_path = 'images/t1.png'
     image = cv2.imread(img_path)
-    text,image = get_det_boxes(image)
+    text,image_with_boxes, original_image = get_det_boxes(image)
     print(f"[RESULT] text {text}")
-    print(f"[RESULT] image {image.shape}")
+    print(f"[RESULT] image {image_with_boxes.shape}")
